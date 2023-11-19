@@ -1,0 +1,108 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "instantRAG",
+    "description": "google drive search and file input",
+    "version": "v1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://script.google.com"
+    }
+  ],
+  "paths": {
+    "/macros/s/AKfycbyaME8FSTt3oGCF5ISzK5OOamJY7TXjfQXtt1teSa4DcZoiUzA8r_pliwuTFcqnVvR-QA/exec": {
+      "get": {
+        "description": "Get filename or foldername by keyword",
+        "operationId": "GetNameByKeyword",
+        "parameters": [
+          {
+            "name": "Keyword",
+            "in": "query",
+            "description": "Keyword",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/KeywordResponseSchema"
+								}
+							}
+						}
+					}
+				},        
+        "deprecated": false
+      },
+      "post": {
+        "description": "Get file by Url",
+        "operationId": "GetFileByUrl",
+        "parameters": [
+          {
+            "name": "Url",
+            "in": "query",
+            "description": "Url",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/FileResponseSchema"
+								}
+							}
+						}
+					}
+				},        
+        "deprecated": false
+      }      
+    }
+  },
+  "components": {
+    "schemas": {
+      "KeywordResponseSchema": {
+        "type": "object",
+        "properties": {
+          "No": {
+            "type": "string"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Type": {
+            "type": "string"
+          },
+          "LastUpdated": {
+            "type": "string"
+          },
+          "Url": {
+            "type": "string"
+          },
+          "Path": {
+            "type": "string"
+          }
+        }
+      },
+      "FileResponseSchema": {
+        "type": "object",
+        "properties": {
+          "Text": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
