@@ -11,7 +11,7 @@
     }
   ],
   "paths": {
-    "/macros/s/AKfycbyaME8FSTt3oGCF5ISzK5OOamJY7TXjfQXtt1teSa4DcZoiUzA8r_pliwuTFcqnVvR-QA/exec": {
+    "Replace here with part of the URL of your google apps script endpoint": {
       "get": {
         "description": "Get filename or foldername by keyword",
         "operationId": "GetNameByKeyword",
