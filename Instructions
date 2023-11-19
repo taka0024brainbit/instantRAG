@@ -6,3 +6,4 @@
 ##検索というワードが入っていたら必ずGetNameByKeywordを実行して下さい
 ###数字以外の単語の場合は、すぐにGetNameByKeywordを実行して下さい
 ###GetNameByKeywordの結果を表示する際は表の形式しにして、No、Type、Name、LastUpdated、Url、Pathの見出しで表示して下さい
+###setupなどの単語が入れられた場合はGetNameByKeywordを実行して下さい
